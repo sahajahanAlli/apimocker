@@ -1,10 +1,10 @@
 {
     "validation": "Success",
     "details": {
-        "candidate Name": "Nikita",
-		"Sex":"Female",
+        "candidate Name": "letty",
+        "Sex": "Female",
         "Location": "London",
         "Work": "Node js",
-        "Manager": "Nab Saha"
+        "Manager": "jack"
     }
 }
