@@ -1,6 +1,6 @@
 {
     "note": "This is a sample config file. You should change the mockDirectory to a more reasonable path.",
-    "mockDirectory": "/Educations/nodejspract/apimocker/samplemocks/",
+    "mockDirectory": "/Educations/nodejspract/apimocker/mocks/",
     "staticDirectory": "/file/system/path/to/static/directory",
     "staticPath": "/web/path/to/static/directory",
     "quiet": false,
@@ -41,6 +41,50 @@
             "switchResponses": {
                 "nameSahajahanplaceLondondescSoftware": { "httpStatus": 200, "mockFile": "DetailsMale.json" },
                 "nameSalimplaceLondondescRailway": { "httpStatus": 200, "mockFile": "DetailsFemale.json" }
+            }
+        },
+        "app3": {
+            "verbs": ["post"],
+            "switch": ["name", "$..place.city"],
+            "responses": {
+                "contentType": "application/json",
+                "post": {
+                    "httpStatus": 401,
+                    "mockFile": "sorry.json"
+                }
+            },
+            "switchResponses": {
+                "nameSahajahanplaceLondondescSoftware": { "httpStatus": 200, "mockFile": "DetailsMale.json" },
+                "nameSalim$..place.cityLondon": { "httpStatus": 200, "mockFile": "DetailsFemale.json" }
+            }
+        },
+        "templatejson/:name/:place": {
+            "verbs": ["get"],
+            "enableTemplate": true,
+            "mockFile": "templatejson.json",
+            "contentType": "application/json"
+        },
+        "templatejson2": {
+            "verbs": ["post"],
+            "enableTemplate": true,
+            "mockFile": "templatejson2_err.json",
+            "templateSwitch": [{
+                    "key": "name",
+                    "switch": "$.name",
+                    "type": "default"
+                },
+                {
+                    "key": "place",
+                    "switch": "$.details.place",
+                    "type": "default"
+                }
+            ],
+            "contentType": "application/json",
+            "responses": {
+                "post": {
+                    "httpStatus": 200,
+                    "mockFile": "templatejson2_success.json"
+                }
             }
         }
     }
