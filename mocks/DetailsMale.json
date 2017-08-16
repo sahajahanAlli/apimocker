@@ -1,0 +1,10 @@
+{
+    "validation": "Success",
+    "details": {
+        "candidate Name": "Saha",
+		"Sex":"Male",
+        "Location": "London",
+        "Work": "Node js",
+        "Manager": "Nab Saha"
+    }
+}
