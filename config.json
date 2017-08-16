@@ -39,8 +39,8 @@
                 }
             },
             "switchResponses": {
-                "nameSahajahanplaceLondondescSoftware": { "httpStatus": 200, "mockFile": "DetailsMale.json" },
-                "nameSalimplaceLondondescRailway": { "httpStatus": 200, "mockFile": "DetailsFemale.json" }
+                "namerockplaceLondondescSoftware": { "httpStatus": 200, "mockFile": "DetailsMale.json" },
+                "namelettyplaceLondondescRailway": { "httpStatus": 200, "mockFile": "DetailsFemale.json" }
             }
         },
         "app3": {
